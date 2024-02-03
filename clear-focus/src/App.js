@@ -1,19 +1,23 @@
-import React, { useState } from 'react';
-import AddTaskForm from './AddTaskForm';
+// App.js
+
+import React from 'react';
+import './App.css';
 
 const App = () => {
-  const [tasks, setTasks] = useState([]);
-
-  const handleAddTask = (newTask) => {
-    // Add the new task to the tasks array
-    setTasks([...tasks, newTask]);
-  };
-
   return (
-    <div>
-      <h1>Clear Focus Family</h1>
-      {/* Render the list of tasks here if needed */}
-      <AddTaskForm onAddTask={handleAddTask} />
+    <div className="App-header">
+      <h1>Clear Form Family</h1>
+      <div className="App-content">
+        <div className="App-category">
+          <label htmlFor="familyMember">Family Member</label>
+          <input type="text" id="familyMember" />
+        </div>
+        <div className="App-category">
+          <label htmlFor="task">Task</label>
+          <input type="text" id="task" />
+        </div>
+        <button>Save</button>
+      </div>
     </div>
   );
 };
