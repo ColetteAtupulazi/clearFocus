@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+/* styles.css */
+
+.Homepage {
+  padding: 20px;
+}
+
+.add-member-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
