@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>To-Do List App</h1>
+      <h1>Clear Focus Family</h1>
       {/* Render the list of tasks here if needed */}
       <AddTaskForm onAddTask={handleAddTask} />
     </div>
