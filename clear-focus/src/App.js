@@ -13,7 +13,7 @@ const App = () => {
           <input type="text" id="familyMember" />
         </div>
         <div className="App-category">
-          <label htmlFor="task">Task</label>
+          <label htmlFor="task">Tasks</label>
           <input type="text" id="task" />
         </div>
         <button>Save</button>
