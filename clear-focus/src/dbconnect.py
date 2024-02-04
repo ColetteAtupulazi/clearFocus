@@ -13,14 +13,11 @@ try:
     # Create a cursor object to execute SQL queries
     cursor = cnn.cursor()
 
-    # Execute a SELECT query to retrieve data from the table
     query = "SELECT * FROM family_mem;"
     cursor.execute(query)
 
-    # Fetch all rows from the result set
     rows = cursor.fetchall()
 
-    # Print the retrieved data
     for row in rows:
         print(row)
 
@@ -33,7 +30,6 @@ except mysql.connector.Error as e:
         print(e)
 
 finally:
-    # Close the cursor and connection
     if 'cursor' in locals() and cursor is not None:
         cursor.close()
     if 'cnn' in locals() and cnn.is_connected():

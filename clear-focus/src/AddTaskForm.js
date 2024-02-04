@@ -5,16 +5,13 @@ const AddTaskForm = ({ onAddTask }) => {
   const [task, setTask] = useState('');
 
   const handleSave = () => {
-    // Check if both family member and task are filled before saving
     if (familyMember.trim() === '' || task.trim() === '') {
       alert('Please enter both family member and task.');
       return;
     }
 
-    // Call the parent component's function to handle saving
     onAddTask({ familyMember, task });
 
-    // Clear the input fields after saving
     setFamilyMember('');
     setTask('');
   };

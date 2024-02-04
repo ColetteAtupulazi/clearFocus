@@ -1,11 +1,9 @@
-// App.js
-
 import React from 'react';
 import './App.css';
 import FamilyPage from "./FamilyPage";
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import AddTaskForm from './AddTaskForm'; // Assuming this is intended for adding family members
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import AddTaskForm from './AddTaskForm'; 
 
 const App = () => {
     return (
@@ -22,10 +20,13 @@ const App = () => {
                         <input type="text" id="task" />
                     </div>
                     <button>Save</button>
-                    <Switch>
-                        <Route exact path="/" component={FamilyPage} />
-                        <Route exact path="/add-member" component={AddTaskForm} /> {/* Use AddTaskForm here */}
-                    </Switch>
+
+                    <Routes>
+                    <Route exact path="/" component={<FamilyPage />} />
+                    <Route exact path="/add-task" component={<AddTaskForm/>} /> 
+                    </Routes>
+                        
+                  
                 </div>
             </div>
         </Router>
