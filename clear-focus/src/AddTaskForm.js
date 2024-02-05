@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const AddTaskForm = ({ onAddTask }) => {
-  const [familyMember, setFamilyMember] = useState('');
-  const [task, setTask] = useState('');
+  const [familyMember, setFamilyMember] = useState("");
+  const [task, setTask] = useState("");
 
   const handleSave = () => {
-    if (familyMember.trim() === '' || task.trim() === '') {
-      alert('Please enter both family member and task.');
+    if (familyMember.trim() === "" || task.trim() === "") {
+      alert("Please enter both family member and task.");
       return;
     }
 
     onAddTask({ familyMember, task });
 
-    setFamilyMember('');
-    setTask('');
+    setFamilyMember("");
+    setTask("");
   };
 
   return (
